@@ -1,7 +1,9 @@
 """Example of how to use pylint"""
+
+
 class MyPerson:
-    """Hola
-    """
+    """_summary_"""
+
     def __init__(self, name, age, gender):
         self.name = name
         self.age = age
@@ -17,4 +19,22 @@ class MyPerson:
         self.asked_for_name = True
         return self.name
 
+
 print(MyPerson("Mike", 20, "m").getname())
+
+NUM_POINTS = 120
+
+ADD = 2
+
+
+def example_function(x, y):
+    """_summary_
+
+    Args:
+        x (_type_): _description_
+        y (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
+    return x + y
