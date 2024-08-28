@@ -5,11 +5,29 @@ jupytext:
     format_name: myst
     format_version: 0.13
     jupytext_version: 1.16.2
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
 ---
 
 # Functions and Classes
 
-In this notebook, we will explore how to create and use functions and classes in Python, particularly in the context of geospatial programming. Functions and classes are essential for organizing your code, promoting reuse, and enabling more complex data manipulation and analysis.
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/giswqs/geog-312/blob/main/book/python/06_functions_classes.ipynb)
+
+## Overview
+
+This lecture introduces the concepts of functions and classes in Python, focusing on their application in geospatial programming. Functions allow you to encapsulate code into reusable blocks, making your scripts more modular and easier to maintain. Classes provide a way to create complex data structures by bundling data and functionality together. By understanding and applying these concepts, you will be able to build more sophisticated and efficient geospatial analysis tools.
+
+## Learning Objectives
+
+By the end of this lecture, you should be able to:
+
+- Define and use functions to perform specific tasks and promote code reuse in geospatial applications.
+- Understand and implement classes to represent complex geospatial data structures, such as geographic features.
+- Combine functions and classes to create modular and scalable geospatial tools.
+- Apply object-oriented programming principles to organize and manage geospatial data and operations effectively.
+- Develop the skills to extend existing classes and create new ones tailored to specific geospatial tasks.
 
 +++
 
@@ -19,7 +37,7 @@ Functions are blocks of code that perform a specific task and can be reused mult
 
 Let's start by defining a simple function to calculate the distance between two points using the Haversine formula.
 
-```{code-cell}
+```{code-cell} ipython3
 from math import radians, sin, cos, sqrt, atan2
 
 
@@ -47,7 +65,7 @@ Classes are blueprints for creating objects. An object is an instance of a class
 
 Let's define a simple `Point` class to represent a geographic point.
 
-```{code-cell}
+```{code-cell} ipython3
 class Point:
     def __init__(self, latitude, longitude, name=None):
         self.latitude = latitude
@@ -76,7 +94,7 @@ print(
 
 You can use functions within classes to create more powerful and flexible geospatial tools. For example, we can extend the `Point` class to include methods for calculating the midpoint between two points.
 
-```{code-cell}
+```{code-cell} ipython3
 class Point:
     def __init__(self, latitude, longitude, name=None):
         self.latitude = latitude
@@ -108,7 +126,7 @@ print(mid_point)
 2. Extend the `Point` class to include a method that returns the bearing (direction) from the current point to another point.
 3. Create a `Polygon` class that can hold a list of `Point` objects representing the vertices of the polygon. Add a method to calculate the perimeter of the polygon.
 
-```{code-cell}
+```{code-cell} ipython3
 # Type your code here
 ```
 

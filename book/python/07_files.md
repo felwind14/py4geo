@@ -5,11 +5,29 @@ jupytext:
     format_name: myst
     format_version: 0.13
     jupytext_version: 1.16.2
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
 ---
 
 # Files and Exception Handling
 
-This notebook introduces how to work with files and handle exceptions in Python, with a focus on geospatial data. Working with files is a common task in geospatial programming, whether you are reading data from a file, writing results to a file, or processing large datasets. Exception handling is crucial for writing robust code that can handle errors gracefully.
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/giswqs/geog-312/blob/main/book/python/07_files.ipynb)
+
+## Overview
+
+This lecture introduces techniques for working with files and handling exceptions in Python, focusing on their importance in geospatial programming. Managing files effectively is crucial when reading, writing, or processing geospatial data. Exception handling is equally important as it allows your programs to gracefully manage errors, ensuring that your code remains robust and reliable even in the face of unexpected issues.
+
+## Learning Objectives
+
+By the end of this lecture, you should be able to:
+
+- Read from and write to files in Python, with a particular focus on handling geospatial data.
+- Implement exception handling using `try`, `except`, and `finally` blocks to manage errors that may occur during file operations.
+- Combine file handling and exception handling to create robust and reliable geospatial applications.
+- Develop the skills to identify and manage common issues in file processing, such as missing files, corrupt data, or formatting errors.
+- Ensure that your geospatial programs can handle real-world data scenarios effectively by using best practices for file and exception handling.
 
 +++
 
@@ -17,18 +35,18 @@ This notebook introduces how to work with files and handle exceptions in Python,
 
 In geospatial programming, you often need to read from or write to files. Python provides built-in functions to handle these tasks. Let's start by reading from a text file containing coordinates and writing the results to a new file.
 
-```{code-cell}
+```{code-cell} ipython3
 # Example of reading coordinates from a file and writing to another file
-input_file = 'coordinates.txt'
-output_file = 'output_coordinates.txt'
+input_file = "coordinates.txt"
+output_file = "output_coordinates.txt"
 
 try:
-    with open(input_file, 'r') as infile:
+    with open(input_file, "r") as infile:
         coordinates = infile.readlines()
 
-    with open(output_file, 'w') as outfile:
+    with open(output_file, "w") as outfile:
         for line in coordinates:
-            lat, lon = line.strip().split(',')
+            lat, lon = line.strip().split(",")
             outfile.write(f"Latitude: {lat}, Longitude: {lon}\n")
 
     print(f"Coordinates have been written to {output_file}")
@@ -42,11 +60,11 @@ Exception handling allows you to handle errors that occur during the execution o
 
 Let's explore how to handle different types of exceptions using `try`, `except`, and `finally`.
 
-```{code-cell}
+```{code-cell} ipython3
 # Example of exception handling when parsing coordinates
 def parse_coordinates(line):
     try:
-        lat, lon = line.strip().split(',')
+        lat, lon = line.strip().split(",")
         lat = float(lat)
         lon = float(lon)
         return lat, lon
@@ -59,7 +77,7 @@ def parse_coordinates(line):
 
 
 # Example usage
-line = 'invalid data'
+line = "invalid data"
 coordinates = parse_coordinates(line)
 if coordinates:
     print(f"Parsed coordinates: {coordinates}")
@@ -69,11 +87,11 @@ if coordinates:
 
 You can combine file handling and exception handling to create robust geospatial applications. This allows you to ensure that files are properly handled even if errors occur during the process.
 
-```{code-cell}
+```{code-cell} ipython3
 # Example of robust file handling with exceptions
 def process_geospatial_file(input_file):
     try:
-        with open(input_file, 'r') as infile:
+        with open(input_file, "r") as infile:
             for line in infile:
                 coordinates = parse_coordinates(line)
                 if coordinates:
@@ -87,7 +105,7 @@ def process_geospatial_file(input_file):
 
 
 # Example usage
-process_geospatial_file('coordinates.txt')
+process_geospatial_file("coordinates.txt")
 ```
 
 ## Exercises
@@ -96,7 +114,7 @@ process_geospatial_file('coordinates.txt')
 2. Write a function that writes a list of coordinates to a file. Include exception handling to ensure that the file is properly closed even if an error occurs during writing.
 3. Create a robust geospatial data processing function that reads data from a file, processes it, and writes the results to another file. Ensure that all potential errors are handled appropriately.
 
-```{code-cell}
+```{code-cell} ipython3
 # Type your code here
 ```
 
