@@ -45,7 +45,8 @@ git fetch personal
 # Step 5: Check out the branch you want to contribute to
 git checkout -b my-local-branch(eg b_py4g) personal/branch-name(eg f_py4g)
 
-Eg (=> git checkout -b b_py4g personal/f_py4g)
+
+# Eg (=> git checkout -b b_py4g personal/f_py4g) -now main will be f_py4g
 
 # Stage your changes
 git add .
@@ -53,5 +54,6 @@ git add .
 # Commit your changes
 git commit -m "Description of changes"
 
-# Push your changes to the personal remote
+# Push your changes to the personal remote ---I get prompted to my personal git and then make the merge
 git push personal b_py4g
+
