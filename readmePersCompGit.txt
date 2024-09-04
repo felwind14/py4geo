@@ -57,3 +57,10 @@ git commit -m "Description of changes"
 # Push your changes to the personal remote ---I get prompted to my personal git and then make the merge
 git push personal b_py4g
 
+
+#HOw to bring changes from personal to b_py4g
+# Ensure you are on your local branch
+git checkout b_py4g
+
+# Merge the changes from the personal remote's f_py4g branch
+git merge personal/f_py4g

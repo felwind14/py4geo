@@ -1,0 +1,11 @@
+{
+  "cSpell.ignoreWords": ["subvalue"],
+  "cSpell.words": [
+    "DISTUNITS",
+    "dstband",
+    "geopandas",
+    "osgeo",
+    "srcband",
+    "vsimem"
+  ]
+}
