@@ -43,9 +43,8 @@ git remote add personal https://github.com/personal-username/personal-repo.git
 git fetch personal
 
 # Step 5: Check out the branch you want to contribute to
+
 git checkout -b my-local-branch(eg b_py4g) personal/branch-name(eg f_py4g)
-
-
 # Eg (=> git checkout -b b_py4g personal/f_py4g) -now main will be f_py4g
 
 # Stage your changes
