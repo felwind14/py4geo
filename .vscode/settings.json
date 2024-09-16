@@ -2,6 +2,7 @@
   "cSpell.ignoreWords": ["subvalue"],
   "cSpell.words": [
     "DISTUNITS",
+    "dlat",
     "dstband",
     "geopandas",
     "osgeo",
