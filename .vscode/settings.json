@@ -4,7 +4,10 @@
     "DISTUNITS",
     "dlat",
     "dstband",
+    "Fonseca",
     "geopandas",
+    "geospatial",
+    "infile",
     "osgeo",
     "srcband",
     "vsimem"
