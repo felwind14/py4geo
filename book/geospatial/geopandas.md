@@ -4,9 +4,9 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.16.2
+    jupytext_version: 1.16.4
 kernelspec:
-  display_name: Python 3
+  display_name: Python 3 (ipykernel)
   language: python
   name: python3
 ---
@@ -15,17 +15,26 @@ kernelspec:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/giswqs/geog-312/blob/main/book/geospatial/geopandas.ipynb)
 
-## Introduction
+## Overview
 
-[GeoPandas](https://geopandas.org) is an open-source project that makes working with geospatial data in Python easier. It extends the datatypes used by pandas to allow spatial operations on geometric types. GeoPandas combines the capabilities of pandas and Shapely, providing geospatial operations in a pandas-like interface.
+[GeoPandas](https://geopandas.org) is an open-source Python library that simplifies working with geospatial data by extending Pandas data structures. It seamlessly integrates geospatial operations with a pandas-like interface, allowing for the manipulation of geometric types such as points, lines, and polygons. GeoPandas combines the functionalities of Pandas and Shapely, enabling geospatial operations like spatial joins, buffering, intersections, and projections with ease.
+
+## Learning Objectives
+
+By the end of this lecture, you should be able to:
+
+- Understand the basic data structures in GeoPandas: `GeoDataFrame` and `GeoSeries`.
+- Create `GeoDataFrames` from tabular data and geometric shapes.
+- Read and write geospatial data formats like Shapefile and GeoJSON.
+- Perform common geospatial operations such as measuring areas, distances, and spatial relationships.
+- Visualize geospatial data using Matplotlib and GeoPandas' built-in plotting functions.
+- Work with different Coordinate Reference Systems (CRS) and project geospatial data.
 
 ## Concepts
 
 The core data structures in GeoPandas are `GeoDataFrame` and `GeoSeries`. A `GeoDataFrame` extends the functionality of a Pandas DataFrame by adding a geometry column, allowing spatial data operations on geometric shapes. The `GeoSeries` handles geometric data (points, polygons, etc.).
 
 A `GeoDataFrame` can have multiple geometry columns, but only one is considered the active geometry at any time. All spatial operations are applied to this active geometry, accessible via the `.geometry` attribute.
-
-![image](https://github.com/user-attachments/assets/2aaef047-5387-4d67-b346-17ebbc4e845b)
 
 +++
 
