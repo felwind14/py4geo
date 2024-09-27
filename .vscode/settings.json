@@ -1,14 +1,21 @@
 {
   "cSpell.ignoreWords": ["subvalue"],
   "cSpell.words": [
+    "arange",
+    "Boro",
     "DISTUNITS",
     "dlat",
     "dstband",
+    "edgecolor",
+    "figsize",
     "Fonseca",
     "geopandas",
     "geospatial",
+    "gpkg",
     "infile",
     "osgeo",
+    "Reproject",
+    "reprojected",
     "srcband",
     "vsimem"
   ]
