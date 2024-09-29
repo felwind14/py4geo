@@ -1,22 +1,39 @@
 {
-  "cSpell.ignoreWords": ["subvalue"],
+  "cSpell.ignoreWords": ["imshow", "subvalue"],
   "cSpell.words": [
     "arange",
     "Boro",
+    "cbar",
+    "colorbar",
+    "colormaps",
     "DISTUNITS",
     "dlat",
     "dstband",
+    "dtype",
+    "dtypes",
     "edgecolor",
+    "facecolor",
     "figsize",
     "Fonseca",
     "geopandas",
     "geospatial",
     "gpkg",
     "infile",
+    "ndvi",
+    "NDVI",
     "osgeo",
+    "rasterio",
     "Reproject",
     "reprojected",
     "srcband",
-    "vsimem"
-  ]
+    "viridis",
+    "Viridis",
+    "vmax",
+    "vmin",
+    "vsimem",
+    "xlabel",
+    "ylabel"
+  ],
+  "python.languageServer": "Pylance",
+  "cSpell.enableFiletypes": ["plaxis2d_logfile"]
 }
